@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Row Properties | Homes in Accra</title>
+  <meta name="description" content="Sample real estate website for a fictional agency in Accra. Homes for sale and rent, with enquiries via WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Atlas Row Properties",
+    "description": "Sample real estate agency in Accra (fictional, for portfolio use).",
+    "telephone": "+233200000000",
+    "address": { "@type": "PostalAddress", "addressLocality": "Accra", "addressCountry": "GH" }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" data-bind="name"></a>
+      <nav class="nav">
+        <a href="#listings">Properties</a>
+        <a href="#services">Services</a>
+        <a href="#stats">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-lime btn-small" data-wa>Get in touch</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <p class="pill" data-bind="heroPill"></p>
+        <h1 data-bind="headline"></h1>
+        <div class="hero-bottom">
+          <p class="lead" data-bind="subtext"></p>
+          <div class="hero-actions">
+            <a class="btn btn-lime" href="#listings">View properties</a>
+            <a class="btn btn-outline" data-wa>Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" id="stats">
+      <div class="container stats-grid" id="stats-items"></div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <p class="eyebrow">What we do</p>
+        <h2 class="section-title" data-bind="servicesTitle"></h2>
+        <div class="tiles" id="service-items"></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="listings">
+      <div class="container">
+        <p class="eyebrow">Featured properties</p>
+        <h2 class="section-title" data-bind="listingsTitle"></h2>
+        <div class="grid" id="listing-items"></div>
+        <p class="note" data-bind="note"></p>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container why-grid">
+        <div>
+          <p class="eyebrow">Why us</p>
+          <h2 class="section-title" data-bind="whyTitle"></h2>
+          <p class="why-text" data-bind="whyText"></p>
+        </div>
+        <ul class="checks" id="reasons"></ul>
+      </div>
+    </section>
+
+    <section class="section section-lime" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Let's find your next home</h2>
+          <p><strong>Phone:</strong> <a data-tel data-bind="phoneDisplay"></a></p>
+          <p><strong>Hours:</strong> <span data-bind="hours"></span></p>
+          <p><strong>Areas:</strong> <span data-bind="areasText"></span></p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-dark" data-wa>WhatsApp us</a>
+          <a class="btn btn-outline-dark" data-tel>Call now</a>
+          <a class="btn btn-outline-dark" data-maps target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" data-bind="footer"></div>
+  </footer>
+
+  <a class="fab-whatsapp" data-wa aria-label="Chat on WhatsApp">WhatsApp</a>
+
+  <script src="site-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
